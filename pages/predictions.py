@@ -14,7 +14,7 @@ column1 = dbc.Col(
     [
         dcc.Markdown(
             """
-        
+
             ## Predictions
 
             Your instructions: How to use your app to get new predictions.

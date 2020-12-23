@@ -6,13 +6,13 @@ https://github.com/facultyai/dash-bootstrap-components
 
 dash-bootstrap-components provides Bootstrap components.
 
-Plotly Dash is great! However, creating the initial layout can require a lot 
-of boilerplate. dash-bootstrap-components reduces this boilerplate by providing 
+Plotly Dash is great! However, creating the initial layout can require a lot
+of boilerplate. dash-bootstrap-components reduces this boilerplate by providing
 standard layouts and high-level components.
 
-A good way to start customising the stylesheet is to use an alternative 
-pre-compiled theme. Bootswatch is a great place to find new themes. Links to 
-CDNs for each of the Bootswatch styles are also included , and can be used 
+A good way to start customising the stylesheet is to use an alternative
+pre-compiled theme. Bootswatch is a great place to find new themes. Links to
+CDNs for each of the Bootswatch styles are also included , and can be used
 with the external_stylesheets argument of the Dash constructor:
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CERULEAN])
@@ -54,5 +54,5 @@ meta_tags=[
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, meta_tags=meta_tags)
 app.config.suppress_callback_exceptions = True # see https://dash.plot.ly/urls
-app.title = 'YOUR APP NAME' # appears in browser title bar
+app.title = 'STUDENT PERFORMANCE AND STATE EDUCATION EXPENDITURE' # appears in browser title bar
 server = app.server
