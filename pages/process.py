@@ -14,10 +14,11 @@ column1 = dbc.Col(
     [
         dcc.Markdown(
             """
-            # Process
-            ### The Big Question
+            # **Process**
+            ### **The Big Question**
 
-            #### Background
+            #### **Background**
+
             Schools have been trying to measure the effectiveness of schools for many decades. The first standardized test appeared in 1845.
             There have been many critiques about testing but without another standardized procedure to measure student performance and thereby
             school effectiveness, these standardized tests have persisted.
@@ -27,16 +28,15 @@ column1 = dbc.Col(
             For this dataset I chose the following question:
             **Does state expenditure affect student outcome on state tests?**
 
-            #### Regression or Classification?
+            #### **Regression or Classification?**
+            Noticings: Unfortunately, the state scores are not very good for any of the states for any of the years. Most states,
+            across both Math and Reading, have underperformed; only a small percentage scored proficient (only in Math).
 
             Choosing whether or not this was a regression or classification problem took me some time to figure out. I wanted to do a
             regression analysis but since I wanted this information to be accessible to all, I felt that classification would allow users
             to better grasp outcomes. (I do have a regression version of this as well.)
 
-            Noticings: Unfortunately, the state scores are not very good for any of the states for any of the years. Most states,
-            across both Math and Reading, have underperformed; only a small percentage scored proficient (only in Math).
-
-            #### Defining the Target
+            #### **Defining the Target**
 
             With the dataset, there was a 4th and 8th grade Math and Reading Score columns. To create a classification
             problem, I chose the 8th grade reading scores as the Target column and then broke it down based on the NAEP's
@@ -51,7 +51,7 @@ column1 = dbc.Col(
             proficient (281-322)
             advanced (323-500)
 
-            #### Cleanup
+            #### **Cleanup**
 
             There was a lot of data cleaning that I had to do to make this dataset usable.
             * I first merged the state csv and the finance csv. I had to update finance csv to capture 2017
@@ -79,21 +79,26 @@ column1 = dbc.Col(
 
             And from 1492 rows to 524 rows
 
-            #### Metric and Baseline
+            #### **Metric and Baseline**
 
-            After defining the target it became a simple matter of choosing a metric and baseline to go off of. To start, I realized that
-            squirrels were friendly in 1,581 observations and ran away in 1,410. This would mean that the baseline estimate someone could
-            guess would be that a squirrel would be friendly 52.9 percent of the time and the remaining 47.1 percent it would run away.
+            After defining the target it became a simple matter of choosing a metric and baseline to go off of.
+            To determine my baseline, I took the average of my target colum "READING_PROF_8":
+                        2.0    0.505976
+                        3.0    0.486056
+                        1.0    0.007968
+            So if someone guessed that the state performed at a 2, or mid basic level, the user would be correct 50% of the time.
             That just leaves choosing a metric to score my model on. I picked accuracy as my metric because if I could beat the baseline
             accuracy, I would be able to see how useful my model was.
 
-            #### Leakage and Usefulness
+            #### **Leakage and Usefulness**
 
-            There were no features that gave leakage into my target column in fact when I dropped the inital 3 columns: Approaches,
-            Indifferent, and Runs from. I was able to eliminate all leakage and so my model is watertight when its predictions
-            are made. The usefulness of this model is in the eye of the beholder. Perhaps a scientist would like to figure out why
-            a certain color of squirrel is more prone to running or why squirrels in northern centrall park respond differently
-            than the ones in the southern part. My intention of making the model was to make it fun for park goers.
+            There were no features that gave leakage into my target column in fact when I dropped the 'AVG_READING_8_SCORE',
+            I was able to eliminate all leakage and so my model is watertight when its predictions are made.
+            This model test accuracy is 62.7%, so while I managed to beat the baseline, this model is only the start
+            of the discussion of what truly affects student outcome on these standardized tests. There are so many other
+            factors that need to be examined  to determine what affects student outcome on standardized testing so schools can
+            best meet the needs of students and most importantly are standardized tests even the best determinant of student or
+            school success.
 
             """
         ),
