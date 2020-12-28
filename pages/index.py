@@ -18,7 +18,7 @@ column1 = dbc.Col(
             ### Does Education Expenditure Affect Student Performance?
 
 
-            State Expenditure Vs Student Outcome app allows users to see how a state's total expenditure
+            State Expenditure Vs Student Outcome app allows users to see how a state's expenditure
             on education affects student outcome on standardized exams, specifically 8th grade reading.
 
 

@@ -48,26 +48,27 @@ column1 = dbc.Col(
             problem, I chose the 8th grade reading scores as the Target column and then broke it down based on the NAEP's
             breakdown of scores:
 
-            NAEP Reading Score Breakdown
-            basic (0-280)
-                This column was broken down into 3 categories:
-                low,
-                mid, and
-                high basic
-            proficient (281-322)
-            advanced (323-500)
+            NAEP Reading Score Breakdown:
+
+                basic (0-280)
+                    This column was broken down into 3 categories:
+                    low,
+                    mid, and
+                    high basic
+                proficient (281-322)
+                advanced (323-500)
 
             #### **Cleanup**
 
 
             There was a lot of data cleaning that I had to do to make this dataset usable.
-            * I first merged the state csv and the finance csv. I had to update finance csv to capture 2017
+            * Merged the state csv and the finance csv. I had to update finance csv to capture 2017
               census data so I had more usable data.
-            * For this dataset, I would delete the years where the NAEP test scores are not available since that does not
-              give anything for me to train/validate/test the data on. (2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017)
-            * I will also delete the years where I do not have the finacial information available (I updated 2017)
-            * I adjusted the revenue and expenditures columns, using the consumer price index to reflect inflation
-            * I dropped demographic data since this was only captured in 2009.
+            * For this dataset, I deleted the years where the NAEP test scores are not available since that does not
+              give anything for me to train/validate/test the data on. (Test scores available: 2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017)
+            * Deleted the years where I do not have the finacial information available (I updated 2017)
+            * Ddjusted the revenue and expenditures columns, using the consumer price index to reflect inflation
+            * Dropped demographic data since this was only captured in 2009.
 
             Feature engineered 6 columns
             * look at % of total revenue spent on education
