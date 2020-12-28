@@ -25,7 +25,7 @@ column1 = dbc.Col(
     [
         dcc.Markdown('#### Enrollment'),
         dcc.Slider(
-            id='Enrollment',
+            id='ENROLL',
             min= 44199.0,
             max=- 6307022.0,
             step= 500000.0,
@@ -104,7 +104,7 @@ column1 = dbc.Col(
         html.Div(id='slider-output-container8'),
 
     ],
-    md=4,
+    md=6
 )
 
 column2 = dbc.Col(
