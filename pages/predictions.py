@@ -6,7 +6,6 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 from joblib import load
 
-
 # Imports from this application
 from app import app
 print('Pipeline loaded!')

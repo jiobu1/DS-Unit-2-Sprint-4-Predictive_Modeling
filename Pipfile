@@ -11,6 +11,11 @@ dash-bootstrap-components = "*"
 gunicorn = "*"
 plotly = "*"
 pandas = "*"
+shap = "*"
+category-encoders = "*"
+ppscore = "*"
+eli5 = "*"
+pdpbox = "*"
 
 [requires]
 python_version = "3"
