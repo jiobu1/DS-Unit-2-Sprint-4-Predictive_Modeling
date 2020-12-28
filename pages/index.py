@@ -16,28 +16,24 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
 
-            ## Your Value Proposition
+            ## Does Education Expenditure Affect Student Performance?
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
+            State Expenditure Vs Student Outcome app allows users to see how a state's total expenditure
+            on education affects student outcome on standardized exams, specifically 8th grade reading.
 
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
 
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
 
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Student Outcome vs Education Expenditure', color='primary'), href='/predictions')
     ],
     md=4,
 )
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
 
 column2 = dbc.Col(
     [
-        dcc.Graph(figure=fig),
+        html.Img(src='assets/test_taking.jpg', className='img-fluid', style = {'height': '350px'})
     ]
 )
 
