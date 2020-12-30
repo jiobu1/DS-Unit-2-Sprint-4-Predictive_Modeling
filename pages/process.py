@@ -65,7 +65,8 @@ column1 = dbc.Col(
             * Merged the state csv and the finance csv. I had to update finance csv to capture 2017
               census data so I had more usable data.
             * For this dataset, I deleted the years where the NAEP test scores are not available since that does not
-              give anything for me to train/validate/test the data on. (Test scores available: 2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017)
+              give anything for me to train/validate/test the data on.
+              (Test scores available: 2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017)
             * Deleted the years where I do not have the finacial information available (I updated 2017)
             * Ddjusted the revenue and expenditures columns, using the consumer price index to reflect inflation
             * Dropped demographic data since this was only captured in 2009.
@@ -77,13 +78,14 @@ column1 = dbc.Col(
 
             I went from 195 columns to 32 columns:
 
-            'STATE','YEAR','ENROLL','GRADES_PK_G', 'GRADES_KG_G','GRADES_4_G', 'GRADES_8_G','GRADES_12_G','GRADES_1_8_G',
-            'GRADES_9_12_G','GRADES_ALL_G','AVG_MATH_4_SCORE','AVG_READING_4_SCORE','AVG_MATH_8_SCORE','AVG_READING_8_SCORE',
-            'MATH_PROF_8','READING_PROF_8','ADJUSTED_TOTAL_REVENUE','ADJUSTED_FEDERAL_REVENUE','ADJUSTED_STATE_REVENUE',
-            'ADJUSTED_LOCAL_REVENUE','ADJUSTED_TOTAL_EXPENDITURE','ADJUSTED_INSTRUCTION_EXPENDITURE',
-            'ADJUSTED_SUPPORT_SERVICES_EXPENDITURE','ADJUSTED_OTHER_EXPENDITURE','ADJUSTED_CAPITAL_OUTLAY_EXPENDITURE',
-            '%TOTAL_REVENUE','%TOTAL_EXPENDITURE_INSTRUCTION','%TOTAL_EXPENDITURE_SUPPORT_SERVICES',
-            '%TOTAL_EXPENDITURE_OTHER', '%TOTAL_EXPENDITURE_CAPITAL_OUTLAY', 'COST_PER_STUDENT'
+            'STATE','YEAR','ENROLL','GRADES_PK_G', 'GRADES_KG_G','GRADES_4_G', 'GRADES_8_G','GRADES_12_G',
+            'GRADES_1_8_G','GRADES_9_12_G','GRADES_ALL_G','AVG_MATH_4_SCORE','AVG_READING_4_SCORE',
+            'AVG_MATH_8_SCORE','AVG_READING_8_SCORE','MATH_PROF_8','READING_PROF_8','ADJUSTED_TOTAL_REVENUE',
+            'ADJUSTED_FEDERAL_REVENUE','ADJUSTED_STATE_REVENUE','ADJUSTED_LOCAL_REVENUE','ADJUSTED_TOTAL_EXPENDITURE',
+            'ADJUSTED_INSTRUCTION_EXPENDITURE','ADJUSTED_SUPPORT_SERVICES_EXPENDITURE','ADJUSTED_OTHER_EXPENDITURE',
+            'ADJUSTED_CAPITAL_OUTLAY_EXPENDITURE','%TOTAL_REVENUE','%TOTAL_EXPENDITURE_INSTRUCTION',
+            '%TOTAL_EXPENDITURE_SUPPORT_SERVICES','%TOTAL_EXPENDITURE_OTHER', '%TOTAL_EXPENDITURE_CAPITAL_OUTLAY',
+            'COST_PER_STUDENT'
 
             And from 1492 rows to 524 rows.
 
