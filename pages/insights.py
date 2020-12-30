@@ -24,7 +24,7 @@ column1 = dbc.Col(
             '''
             ),
 
-        html.Img(src='assets/permutation_importance.png' className='img-fluid', style={'height':'400px'} )
+        html.Img(src='assets/permutation_importance.png', className='img-fluid', style={'height':'400px'} )
 
         dcc.Markdown(
             '''
@@ -49,9 +49,9 @@ column1 = dbc.Col(
             student outcomes of 1,2,3.
             '''
         ),
-        html.Img(src='assets/pdp_class0.png' className='img-fluid', style={'height':'150px'} )
-        html.Img(src='assets/pdp_class1.png' className='img-fluid', style={'height':'150px'} )
-        html.Img(src='assets/pdp_class2.png' className='img-fluid', style={'height':'150px'} )
+        html.Img(src='assets/pdp_class0.png', className='img-fluid', style={'height':'150px'} )
+        html.Img(src='assets/pdp_class1.png', className='img-fluid', style={'height':'150px'} )
+        html.Img(src='assets/pdp_class2.png', className='img-fluid', style={'height':'150px'} )
 
         dcc.Markdown(
             '''
@@ -69,9 +69,9 @@ column1 = dbc.Col(
             '''
         ),
 
-        html.Img(src='assets/pdp_two_0.png' className='img-fluid', style={'height':'150px'} )
-        html.Img(src='assets/pdp_two_1.png' className='img-fluid', style={'height':'150px'} )
-        html.Img(src='assets/pdp_two_2.png' className='img-fluid', style={'height':'150px'} )
+        html.Img(src='assets/pdp_two_0.png', className='img-fluid', style={'height':'150px'} )
+        html.Img(src='assets/pdp_two_1.png', className='img-fluid', style={'height':'150px'} )
+        html.Img(src='assets/pdp_two_2.png', className='img-fluid', style={'height':'150px'} )
 
 
         dcc.Markdown(
@@ -85,7 +85,7 @@ column1 = dbc.Col(
             struggled to make the correct classification during the final prediction.
             '''
         ),
-        html.Img(src='assets/confusion_matrix.png' className='img-fluid', style={'height':'400px'} )
+        html.Img(src='assets/confusion_matrix.png', className='img-fluid', style={'height':'400px'} )
 
         dcc.Markdown(
             '''
