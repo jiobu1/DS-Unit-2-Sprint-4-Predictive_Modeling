@@ -17,6 +17,11 @@ column1 = dbc.Col(
 
             ## Insights
 
+            #### The Classification Model
+
+            #### Model Explanation
+
+            #### The Final Verdict
 
             """
         ),
