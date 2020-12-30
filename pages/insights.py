@@ -59,8 +59,8 @@ column1 = dbc.Col(
             #### Model Explanation
 
 
-            Since most of the features did not have as predictive a quality as I would like, I wanted to look further to see how ADJUSTED_TOTAL_EXPENDITURE affected the different
-            student outcomes of 1,2,3.
+            Since most of the features did not have as predictive a quality as I would like, I wanted to look further to see how ADJUSTED_TOTAL_EXPENDITURE and
+            %TOTAL_EXPENDITURE_INSTRUCTION affected the different student outcomes of 1,2, or 3.
 
 
             '''
