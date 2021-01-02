@@ -89,7 +89,7 @@ column2 = dbc.Col(
         html.Br(),
         html.Br(),
 
-        dcc.Markdown('##### Percentage Spent on Instruction'),
+        dcc.Markdown('##### % Spent on Instruction'),
         dcc.Slider(
             id = '%TOTAL_EXPENDITURE_INSTRUCTION',
             min = 0.37,
@@ -136,7 +136,6 @@ column3 = dbc.Col(
         ),
     html.Div(id='prediction-content', style={'fontWeight':'bold'}),
     html.Br(),
-    html.Br(),
 
     html.H3('Student Outcome'),
     html.Div(id='prediction-content', className='lead')
@@ -160,8 +159,9 @@ import pandas as pd
     Input('ADJUSTED_TOTAL_EXPENDITURE', 'value'),
     Input('%TOTAL_EXPENDITURE_INSTRUCTION', 'value'),
     Input('%TOTAL_EXPENDITURE_SUPPORT_SERVICES', 'value'),
-    Input('ADJUSTED_OTHER_EXPENDITURE', 'value')],
+    Input('ADJUSTED_OTHER_EXPENDITURE', 'value')]
 )
+
 def predict(ENROLL, COST_PER_STUDENT, AVG_READING_4_SCORE, AVG_MATH_4_SCORE, ADJUSTED_TOTAL_EXPENDITURE, TOTAL_EXPENDITURE_INSTRUCTION, TOTAL_EXPENDITURE_SUPPORT_SERVICES, ADJUSTED_OTHER_EXPENDITURE):
     df = pd.DataFrame(
         columns=['ENROLL','COST_PER_STUDENT','AVG_READING_4_SCORE','AVG_MATH_4_SCORE',
