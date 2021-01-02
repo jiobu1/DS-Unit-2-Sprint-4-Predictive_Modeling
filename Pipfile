@@ -22,6 +22,7 @@ seaborn = "*"
 shap = "*"
 sklearn = "*"
 category-encoders = "==2.2.2"
+llvmlite = "*"
 
 [requires]
 python_version = "3.8"
