@@ -32,6 +32,8 @@ column1 = dbc.Col(
             value = 3175610
         ),
         html.Div(id='slider-output-container1'),
+        html.Br(),
+        html.Br(),
 
         dcc.Markdown('##### Cost Per Student'),
         dcc.Slider(
@@ -42,6 +44,8 @@ column1 = dbc.Col(
             value = 15.00
         ),
         html.Div(id='slider-output-container2'),
+        html.Br(),
+        html.Br(),
 
         dcc.Markdown('##### Average 4th Grade Reading'),
         dcc.Slider(
@@ -52,6 +56,8 @@ column1 = dbc.Col(
             value = 207.000
         ),
         html.Div(id='slider-output-container3'),
+        html.Br(),
+        html.Br(),
 
         dcc.Markdown('##### Average 4th Grade Math'),
         dcc.Slider(
@@ -62,6 +68,8 @@ column1 = dbc.Col(
             value = 222.500
         ),
         html.Div(id='slider-output-container4'),
+        html.Br(),
+        html.Br(),
 
     ],
     md=4
@@ -78,6 +86,8 @@ column2 = dbc.Col(
             value = 959725
         ),
         html.Div(id='slider-output-container5'),
+        html.Br(),
+        html.Br(),
 
         dcc.Markdown('##### Percentage Spent on Instruction'),
         dcc.Slider(
@@ -88,6 +98,8 @@ column2 = dbc.Col(
             value = 0.50
         ),
         html.Div(id='slider-output-container6'),
+        html.Br(),
+        html.Br(),
 
         dcc.Markdown('##### % Spent on Support Services'),
         dcc.Slider(
@@ -98,6 +110,8 @@ column2 = dbc.Col(
             value = 0.30
         ),
         html.Div(id='slider-output-container7'),
+        html.Br(),
+        html.Br(),
 
         dcc.Markdown('##### % Spent on Other'),
         dcc.Slider(
@@ -108,6 +122,8 @@ column2 = dbc.Col(
             value = 2257116.24,
         ),
         html.Div(id='slider-output-container8'),
+        html.Br(),
+        html.Br(),
 
     ],
 )
@@ -119,7 +135,8 @@ column3 = dbc.Col(
         """
         ),
     html.Div(id='prediction-content', style={'fontWeight':'bold'}),
-
+    html.Br(),
+    html.Br(),
 
     html.H3('Student Outcome'),
     html.Div(id='prediction-content', className='lead')
