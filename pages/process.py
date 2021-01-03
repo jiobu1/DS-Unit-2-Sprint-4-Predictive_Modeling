@@ -25,7 +25,6 @@ column1 = dbc.Col(
             #### **Background**
             '''
             ),
-        html.Br(),
 
         dcc.Markdown(
             '''
@@ -40,13 +39,13 @@ column1 = dbc.Col(
             As a former educator, with a decade experience, school performance and student outcome are very important to me.
             '''
             ),
+        html.Br(),
 
         dcc.Markdown(
             '''
             #### **The Big Question**
             '''
             ),
-        html.Br(),
 
         dcc.Markdown(
             '''
@@ -60,13 +59,13 @@ column1 = dbc.Col(
             **Does state expenditure affect student outcome on state tests?**
             '''
             ),
+        html.Br(),
 
         dcc.Markdown(
             '''
             #### **Regression or Classification?**
             '''
             ),
-        html.Br(),
 
         dcc.Markdown(
             '''
@@ -78,13 +77,13 @@ column1 = dbc.Col(
             to better grasp outcomes. (I do have a regression version of this as well.)
             '''
             ),
+        html.Br(),
 
         dcc.Markdown(
             '''
             #### **Defining the Target**
             '''
             ),
-        html.Br(),
 
         dcc.Markdown(
             '''
@@ -107,13 +106,13 @@ column1 = dbc.Col(
                 advanced (323-500)
                 '''
             ),
+        html.Br(),
 
         dcc.Markdown(
             '''
             #### **Cleanup**
             '''
             ),
-        html.Br(),
 
         dcc.Markdown(
             '''
@@ -158,13 +157,13 @@ column1 = dbc.Col(
             And from 1492 rows to 524 rows.
             '''
             ),
+        html.Br(),
 
         dcc.Markdown(
             '''
             #### **Metric and Baseline**
             '''
             ),
-        html.Br(),
 
         dcc.Markdown(
             '''
@@ -185,13 +184,13 @@ column1 = dbc.Col(
             accuracy, I would be able to see how useful my model was.
             '''
             ),
+        html.Br(),
 
         dcc.Markdown(
             '''
             #### **Leakage and Usefulness**
             '''
             ),
-        html.Br(),
 
         dcc.Markdown(
             '''
