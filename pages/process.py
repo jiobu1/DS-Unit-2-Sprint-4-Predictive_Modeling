@@ -24,7 +24,7 @@ column1 = dbc.Col(
             '''
             #### **Background**
             '''
-            )
+            ),
         html.Br(),
 
         dcc.Markdown(
