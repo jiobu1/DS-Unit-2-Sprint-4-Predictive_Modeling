@@ -13,23 +13,24 @@ from app import app
 column1 = dbc.Col(
     [
         dcc.Markdown(
-            """
-
+            '''
             ### Does Education Expenditure Affect Student Performance?
+            '''
+            ),
+        html.Br(),
 
-
+        dcc.Markdown(
+            '''
             State Expenditure Vs Student Outcome app allows users to see how a state's expenditure
             on education affects student outcome on standardized exams, specifically 8th grade reading.
-
-
-
-            """
+            '''
         ),
+        html.Br(),
+
         dcc.Link(dbc.Button('Student Outcome vs Education Expenditure', color='primary'), href='/predictions')
     ],
     md=4,
 )
-
 
 column2 = dbc.Col(
     [
