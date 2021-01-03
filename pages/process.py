@@ -16,7 +16,7 @@ column1 = dbc.Col(
             '''
             # **Process**
             '''
-            )
+            ),
         html.Br(),
         html.Br(),
 
@@ -66,7 +66,7 @@ column1 = dbc.Col(
             #### **Regression or Classification?**
             '''
             ),
-        html.Br()
+        html.Br(),
 
         dcc.Markdown(
             '''
@@ -84,7 +84,7 @@ column1 = dbc.Col(
             #### **Defining the Target**
             '''
             ),
-        html.Br()
+        html.Br(),
 
         dcc.Markdown(
             '''
@@ -113,7 +113,7 @@ column1 = dbc.Col(
             #### **Cleanup**
             '''
             ),
-        html.Br()
+        html.Br(),
 
         dcc.Markdown(
             '''
