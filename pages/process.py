@@ -13,41 +13,89 @@ from app import app
 column1 = dbc.Col(
     [
         dcc.Markdown(
-            """
+            '''
             # **Process**
+            '''
+            )
+        html.Br(),
+        html.Br(),
 
+        dcc.Markdown(
+            '''
             #### **Background**
+            '''
+            )
+        html.Br(),
 
+        dcc.Markdown(
+            '''
             Schools have been trying to measure the effectiveness of schools for many decades. The first standardized test appeared in 1845.
             There have been many critiques about testing but without another standardized procedure to measure student performance and thereby
             school effectiveness, these standardized tests have persisted.
+            '''
+            ),
 
+        dcc.Markdown(
+            '''
             As a former educator, with a decade experience, school performance and student outcome are very important to me.
+            '''
+            ),
 
+        dcc.Markdown(
+            '''
             #### **The Big Question**
+            '''
+            ),
+        html.Br(),
 
+        dcc.Markdown(
+            '''
             In this project, I am trying to understand factors that affect student outcome and how large an impact funding has on this.
             For this dataset I chose the following question:
+            '''
+            ),
 
+        dcc.Markdown(
+            '''
             **Does state expenditure affect student outcome on state tests?**
+            '''
+            ),
 
+        dcc.Markdown(
+            '''
             #### **Regression or Classification?**
+            '''
+            ),
+        html.Br()
 
-
+        dcc.Markdown(
+            '''
             Noticings: Unfortunately, the state scores are not very good for any of the states for any of the years. Most states,
             across both Math and Reading, have underperformed; only a small percentage scored proficient (only in Math).
 
             Choosing whether or not this was a regression or classification problem took me some time to figure out. I wanted to do a
             regression analysis but since I wanted this information to be accessible to all, I felt that classification would allow users
             to better grasp outcomes. (I do have a regression version of this as well.)
+            '''
+            ),
 
+        dcc.Markdown(
+            '''
             #### **Defining the Target**
+            '''
+            ),
+        html.Br()
 
-
+        dcc.Markdown(
+            '''
             With the dataset, there was a 4th and 8th grade Math and Reading Score columns. To create a classification
             problem, I chose the 8th grade reading scores as the Target column and then broke it down based on the NAEP's
             breakdown of scores:
+            '''
+            ),
 
+        dcc.Markdown(
+            '''
             NAEP Reading Score Breakdown:
 
                 basic (0-280)
@@ -57,10 +105,18 @@ column1 = dbc.Col(
                     high basic
                 proficient (281-322)
                 advanced (323-500)
+                '''
+            ),
 
+        dcc.Markdown(
+            '''
             #### **Cleanup**
+            '''
+            ),
+        html.Br()
 
-
+        dcc.Markdown(
+            '''
             There was a lot of data cleaning that I had to do to make this dataset usable.
             * Merged the state csv and the finance csv. I had to update finance csv to capture 2017
               census data so I had more usable data.
@@ -70,12 +126,20 @@ column1 = dbc.Col(
             * Deleted the years where I do not have the finacial information available (I updated 2017)
             * Ddjusted the revenue and expenditures columns, using the consumer price index to reflect inflation
             * Dropped demographic data since this was only captured in 2009.
+            '''
+            ),
 
+        dcc.Markdown(
+            '''
             Feature engineered 6 columns
             * look at % of total revenue spent on education
             * look at % of total expenditure spent on instruction, support other, and capital outlay
             * look at cost per student
+            '''
+            ),
 
+        dcc.Markdown(
+            '''
             I went from 195 columns to 32 columns:
 
             'STATE','YEAR','ENROLL','GRADES_PK_G', 'GRADES_KG_G','GRADES_4_G', 'GRADES_8_G','GRADES_12_G',
@@ -86,15 +150,31 @@ column1 = dbc.Col(
             'ADJUSTED_CAPITAL_OUTLAY_EXPENDITURE','%TOTAL_REVENUE','%TOTAL_EXPENDITURE_INSTRUCTION',
             '%TOTAL_EXPENDITURE_SUPPORT_SERVICES','%TOTAL_EXPENDITURE_OTHER', '%TOTAL_EXPENDITURE_CAPITAL_OUTLAY',
             'COST_PER_STUDENT'
+            '''
+            ),
 
+        dcc.Markdown(
+            '''
             And from 1492 rows to 524 rows.
+            '''
+            ),
 
+        dcc.Markdown(
+            '''
             #### **Metric and Baseline**
+            '''
+            ),
+        html.Br(),
 
-
+        dcc.Markdown(
+            '''
             After defining the target it became a simple matter of choosing a metric and baseline to go off of.
             To determine my baseline, I took the average of my target colum "READING_PROF_8".
+            '''
+            ),
 
+        dcc.Markdown(
+            '''
             Student perfomance breakdown:
 
                         2.0    0.505976
@@ -103,10 +183,18 @@ column1 = dbc.Col(
             So if someone guessed that the state performed at a 2, or mid basic level, the user would be correct 50% of the time.
             That just leaves choosing a metric to score my model on. I picked accuracy as my metric because if I could beat the baseline
             accuracy, I would be able to see how useful my model was.
+            '''
+            ),
 
+        dcc.Markdown(
+            '''
             #### **Leakage and Usefulness**
+            '''
+            ),
+        html.Br(),
 
-
+        dcc.Markdown(
+            '''
             There were no features that caused leakage into my target column. Once I dropped the 'AVG_READING_8_SCORE',
             I was able to eliminate all leakage and so my model is watertight when its predictions are made.
             This model test accuracy is 62.7%, so while I managed to beat the baseline, this model is only the start
@@ -114,8 +202,7 @@ column1 = dbc.Col(
             factors that need to be examined  to determine what affects student outcome on standardized testing so schools can
             best meet the needs of students and most importantly start looking whether standardized tests even are the best determinant
             of student or school success.
-
-            """
+            '''
         ),
 
     ],
