@@ -12,7 +12,7 @@ import pandas as pd
 from app import app
 print('Pipeline loaded!')
 
-# Load Pipeline
+# Load Pipeline used for predicting
 pipeline = load('assets/pipeline.joblib')
 
 # 2 column layout. 1st column width = 4/12

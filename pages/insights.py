@@ -49,7 +49,7 @@ column1 = dbc.Col(
 
         dcc.Markdown(
             '''
-            'ENROLL',  'COST_PER_STUDENT',  'AVG_READING_4_SCORE',  'AVG_MATH_4_SCORE',  'ADJUSTED_TOTAL_EXPENDITURE',  '%TOTAL_EXPENDITURE_INSTRUCTION', 
+            'ENROLL',  'COST_PER_STUDENT',  'AVG_READING_4_SCORE',  'AVG_MATH_4_SCORE',  'ADJUSTED_TOTAL_EXPENDITURE',  '%TOTAL_EXPENDITURE_INSTRUCTION',
             '%TOTAL_EXPENDITURE_SUPPORT_SERVICES',  'ADJUSTED_OTHER_EXPENDITURE'
             '''
             ),
@@ -57,7 +57,7 @@ column1 = dbc.Col(
         dcc.Markdown(
             '''
             Most of the features are self explanatory but below is how I calculated the feature engineered columns that I used in this model.
-            - Cost per student is calculated by taking the enrollment column and dividing by the updated education expenditure (based on the consumer price index)
+            - Cost per student is calculated by taking the updated education expenditure (based on the consumer price index) and dividing by the enrollment column.
             - To find out the percentage spent on instruction and support services, total instruction and support services  expenditure is divided by updated education expenditure
             - Adjusted other expenditure is also updated based on the consumer price index.
             '''
@@ -125,8 +125,8 @@ column1 = dbc.Col(
         dcc.Markdown(
             '''
             Now comes the worst part about real world data, it is subject to random chance. I reserved a little bit of my data known as the test set to give a final hoorah
-            and see how my model would react to observations it wasn't trained on. Funny enough, it did significantly better than validation set.
-            My simplified model scored 62.7 percent on the test set... Everypne wants their model to do significantly better and have an accuracy of 85% or better
+            and see how my model would react to observations it wasn't trained on. Lucky enough, it did significantly better than validation set.
+            My simplified model scored 62.7 percent on the test set... Everyone wants their model to do significantly better and have an accuracy of 85% or better
             but I was pleased that my test accuracy was better than my validation and that this condensed model scored better than using all 32 features.
             I understand that the more data that I collect and train on, the better my model would become. I have plotted a confusion matrix to show the times my model
             struggled to make the correct classification during the final prediction.
@@ -139,7 +139,7 @@ column1 = dbc.Col(
         dcc.Markdown(
             '''
             This topic is much bigger than what my model was capable of predicting. There is so much that rides on the outcome of
-            tests scores but as an educator and homeschooling mom, I wonder if we are measuring the wrong thing.
+            tests scores but as an educator and homeschooling mom, I wonder if we are measuring the right thing.
             '''
         ),
         html.Br(),

@@ -28,15 +28,15 @@ column1 = dbc.Col(
 
         dcc.Markdown(
             '''
-            Schools have been trying to measure the effectiveness of schools for many decades. The first standardized test appeared in 1845.
-            There have been many critiques about testing but without another standardized procedure to measure student performance and thereby
-            school effectiveness, these standardized tests have persisted.
+            The Board of Education, communities, and schools themselves have been trying to measure the effectiveness of schools for many decades.
+            The first standardized test appeared in 1845. There have been many critiques about testing but without another standardized procedure to
+            measure student performance and thereby school effectiveness, these standardized tests have persisted.
             '''
             ),
 
         dcc.Markdown(
             '''
-            As a former educator, with a decade experience, school performance and student outcome are very important to me.
+            As a former educator, with a decade experience, school performance and student outcomes are very important to me.
             '''
             ),
         html.Br(),
@@ -49,7 +49,7 @@ column1 = dbc.Col(
 
         dcc.Markdown(
             '''
-            In this project, I am trying to understand factors that affect student outcome and how large an impact funding has on this.
+            In this project, I am trying to understand factors that affect student outcomes and how large an impact funding has on this.
             For this dataset I chose the following question:
             '''
             ),
@@ -70,7 +70,7 @@ column1 = dbc.Col(
         dcc.Markdown(
             '''
             Noticings: Unfortunately, the state scores are not very good for any of the states for any of the years. Most states,
-            across both Math and Reading, have underperformed; only a small percentage scored proficient (only in Math).
+            across both Math and Reading, have underperformed; only a small percentage scored proficient (and only in Math).
 
             Choosing whether or not this was a regression or classification problem took me some time to figure out. I wanted to do a
             regression analysis but since I wanted this information to be accessible to all, I felt that classification would allow users
@@ -88,7 +88,7 @@ column1 = dbc.Col(
         dcc.Markdown(
             '''
             With the dataset, there was a 4th and 8th grade Math and Reading Score columns. To create a classification
-            problem, I chose the 8th grade reading scores as the Target column and then broke it down based on the NAEP's
+            problem, I chose the 8th grade reading scores as the target column and then broke it down based on the NAEP's
             breakdown of scores:
             '''
             ),
@@ -119,12 +119,13 @@ column1 = dbc.Col(
             There was a lot of data cleaning that I had to do to make this dataset usable.
             * Merged the state csv and the finance csv. I had to update finance csv to capture 2017
               census data so I had more usable data.
-            * For this dataset, I deleted the years where the NAEP test scores are not available since that does not
-              give anything for me to train/validate/test the data on.
+            * For this dataset, I deleted the years where the NAEP test scores were not available since that does not
+              give the model anything to train/validate/test the data.
               (Test scores available: 2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017)
-            * Deleted the years where I do not have the finacial information available (I updated 2017)
-            * Ddjusted the revenue and expenditures columns, using the consumer price index to reflect inflation
-            * Dropped demographic data since this was only captured in 2009.
+            * Deleted the years where I did not have the finacial information available (I updated 2017)
+            * Adjusted the revenue and expenditures columns, using the consumer price index to reflect inflation, all values
+            were updated to be in 2019 dollars.
+            * Dropped demographic data since this started to be captured in 2009.
             '''
             ),
 
@@ -154,7 +155,8 @@ column1 = dbc.Col(
 
         dcc.Markdown(
             '''
-            And from 1492 rows to 524 rows.
+            And from 1492 rows to 524 rows. While this dataset listed all 50 states and US territories, the territories
+            information was captured few and far between (financial and student data).
             '''
             ),
         html.Br(),
@@ -179,7 +181,7 @@ column1 = dbc.Col(
                         2.0    0.505976
                         3.0    0.486056
                         1.0    0.007968
-            So if someone guessed that the state performed at a 2, or mid basic level, the user would be correct 50% of the time.
+            So if someone guessed that the state performed at a 2, or mid basic level, the user would be correct about 50% of the time.
             That just leaves choosing a metric to score my model on. I picked accuracy as my metric because if I could beat the baseline
             accuracy, I would be able to see how useful my model was.
             '''
@@ -196,11 +198,12 @@ column1 = dbc.Col(
             '''
             There were no features that caused leakage into my target column. Once I dropped the 'AVG_READING_8_SCORE',
             I was able to eliminate all leakage and so my model is watertight when its predictions are made.
-            This model test accuracy is 62.7%, so while I managed to beat the baseline, this model is only the start
-            of the discussion of what truly affects student outcome on these standardized tests. There are so many other
-            factors that need to be examined  to determine what affects student outcome on standardized testing so schools can
-            best meet the needs of students and most importantly start looking whether standardized tests even are the best determinant
-            of student or school success.
+            This model validation accuracy with the 32 features was just 53%, only beating the baseline by 3% points.
+            I cut features for usability, going from 32 to 8 and the usability decreased by 0.5%, so while I managed to beat
+            the baseline, this model is only the start of the discussion of what truly affects student outcome on these standardized
+            tests. There are so many other factors that need to be examined  to determine what affects student outcomes 
+            on standardized testing so schools can best meet the needs of students and most importantly start looking 
+            whether standardized tests even are the best determinant of student or school success.
             '''
         ),
 
