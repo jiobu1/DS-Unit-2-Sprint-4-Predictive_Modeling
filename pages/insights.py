@@ -26,7 +26,6 @@ column1 = dbc.Col(
             '''
             ),
         html.Br(),
-        html.Br(),
 
         dcc.Markdown(
             '''
@@ -39,6 +38,7 @@ column1 = dbc.Col(
 
         html.Img(src='assets/permutation_importance.png', className='img-fluid', style={'height':'400px'} ),
         html.Br(),
+        html.Br(),
 
         dcc.Markdown(
             '''
@@ -46,7 +46,6 @@ column1 = dbc.Col(
             I was most interested in. Those 8 features are:
             '''
             ),
-        html.Br(),
 
         dcc.Markdown(
             '''
@@ -54,7 +53,6 @@ column1 = dbc.Col(
             '%TOTAL_EXPENDITURE_SUPPORT_SERVICES',  'ADJUSTED_OTHER_EXPENDITURE'
             '''
             ),
-        html.Br(),
 
         dcc.Markdown(
             '''
@@ -90,6 +88,7 @@ column1 = dbc.Col(
         html.Img(src='assets/pdp_class2.png', className='img-fluid', style={'height':'400px'} ),
         html.Img(src='assets/pdp2_class2.png', className='img-fluid', style={'height':'400px'} ),
         html.Br(),
+        html.Br(),
 
         dcc.Markdown(
             '''
@@ -98,7 +97,6 @@ column1 = dbc.Col(
             you can see a negative effect but with class 1 (2, mid basic) there is a positive effect.
             '''
         ),
-        html.Br(),
 
         dcc.Markdown(
             '''
@@ -114,6 +112,7 @@ column1 = dbc.Col(
         html.Img(src='assets/pdp_two_0.png', className='img-fluid', style={'height':'450px'} ),
         html.Img(src='assets/pdp_two_1.png', className='img-fluid', style={'height':'450px'} ),
         html.Img(src='assets/pdp_two_2.png', className='img-fluid', style={'height':'450px'} ),
+        html.Br(),
         html.Br(),
 
         dcc.Markdown(
