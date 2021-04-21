@@ -360,7 +360,7 @@
                 "sha256:f0a4641d3cf955324a89c04f3d94663aa4d638abe8f733ecd3582848e1c37035"
             ],
             "index": "pypi",
-            "version": "==2.11.2"
+            "version": ">=2.11.3"
         },
         "joblib": {
             "hashes": [
@@ -888,7 +888,7 @@
                 "sha256:f275b6c0909e5dafd2d6269a656aa90fa58ebf4a74f8fcf9053195d226b24a08"
             ],
             "index": "pypi",
-            "version": "==2.7.3"
+            "version": ">=2.7.3"
         },
         "pyparsing": {
             "hashes": [
